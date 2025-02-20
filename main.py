@@ -24,5 +24,14 @@ else:
         elif scelta_computer == "carta":
             print("Sasso perde contro carta. Hai perso! :(")
     
-        
+    elif scelta == "forbice":
+#     if scelta utente == carta:
+        if scelta_computer == "carta":
+            print("Forbice batte carta. Hai vinto! :)")
+        elif scelta_computer == "forbice":
+            print("Forbice contro forbice. Pareggio :|")
+#             if scelta_computer = sasso:
+        elif scelta_computer == "sasso":
+            print("Forbice perde contro sasso. Hai perso! :(")
+    
                     

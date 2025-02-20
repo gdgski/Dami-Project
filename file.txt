@@ -1,0 +1,4 @@
+Risultati del gioco per l'utente alice:
+	pareggi: 0:
+	sconfitte: 2:
+	vittorie: 0:

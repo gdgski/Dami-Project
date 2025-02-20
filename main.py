@@ -1,41 +1,7 @@
 # #Pseudocodice
 import random
-
-# creo una lista di variabili possibili
-# lista = ['sasso', 'carta', 'forbice']
-# # inserimento da parte del utente della sua scelta
-#
-#
-# # scelta computer e uguale a una scelta randomica della lista delle variabili possibili
-#
-# # scelta utente uguale la sua scelta
-# # tutte le if
-#
-#     if scelta not in lista:
-#         print("Error")
-#         scelta = input("Inserisci 'carta, sasso o forbice': " )
-#     else:
-#         if scelta == "sasso":
-#     #     if scelta utente == forbice:
-#             if scelta_computer == "forbice":
-#                 print("Sasso batte forbice. Hai vinto! :)")
-#             elif scelta_computer == "sasso":
-#                 print("Sasso contro sasso. Pareggio :|")
-#     #             if scelta_computer = sasso:
-#             elif scelta_computer == "carta":
-#                 print("Sasso perde contro carta. Hai perso! :(")
-#         elif scelta == "carta":
-#             if scelta_computer == "forbice":
-#                 print("Carta perde contro forbice. Hai perso! :(")
-#             elif scelta_computer == "carta":
-#                 print("Carta contro carta. Pareggio :|")
-#             elif scelta_computer == "sasso":
-#                 print("Carta batte sasso. Hai vinto! :)")
-
-    
-
 lista = ['sasso', 'carta', 'forbice']
-scelta_iniziale = int(input("1)Inizia nuova partita.\n2)Esci\nScelta [1 o 2]: "))
+scelta_iniziale = int(input("1)Inizia nuova partita.\n2)Esci e salva\nScelta [1 o 2]: "))
 punteggio_giocatore = 0
 punteggio_pareggi = 0
 punteggio_computer = 0
@@ -77,7 +43,7 @@ while scelta_iniziale == 1:
                 punteggio_giocatore += 1
             elif scelta_computer == "sasso":
                 print("Sasso batte forbice. Hai person! :(")
-    scelta_iniziale = int(input("1)Inizia nuova partita.\n2)Esci\nScelta [1 o 2]: "))
+    scelta_iniziale = int(input("1)Inizia nuova partita.\n2)Esci e salva\nScelta [1 o 2]: "))
 if scelta_iniziale == 2:
     print(f"Il gioco è finito ecco qua il punteggio finale {punteggio_giocatore} vittorie, {punteggio_pareggi} pareggi,"
               f" e {punteggio_computer} sconfitte")
@@ -86,8 +52,11 @@ if scelta_iniziale == 2:
     if scelta_salvataggio == 1 and somma_punteggi != 0:
         nome_utente = input("Inserisca un nome utente: ")
         if nome_utente != "":
-            print(f"i seguenti dati verrano registrati: Giocatore: {nome_utente} --> "
-                  f"{punteggio_giocatore} vittorie, {punteggio_pareggi} pareggi, e {punteggio_computer} sconfitte")
+            dati = (f"Giocatore: {nome_utente} --> {punteggio_giocatore} vittorie, {punteggio_pareggi} pareggi,"
+                    f" e {punteggio_computer} sconfitte")
+            print(f"i seguenti dati verrano registrati: {dati}")
+            with open('Lista_Punteggi_Salvati.txt', 'a') as f:
+                f.write(f"\n{dati}\n")
         else:
             print("Nome Utente non valido, riprova!")
             nome_utente = input("Inserisca un nome utente: ")

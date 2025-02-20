@@ -1,0 +1,3 @@
+Giocatore: gdg3 --> 0 vittorie, 0 pareggi, e 1 sconfitteGiocatore: gdg4 --> 0 vittorie, 1 pareggi, e 0 sconfitteGiocatore: gdg5 --> 0 vittorie, 0 pareggi, e 1 sconfitte
+
+Giocatore: gdg --> 0 vittorie, 0 pareggi, e 1 sconfitte

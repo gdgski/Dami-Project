@@ -2,7 +2,7 @@
 import random
 
 # creo una lista di variabili possibili
-lista = [sasso, carta, forbice]
+lista = ['sasso', 'carta', 'forbice']
 # inserimento da parte del utente della sua scelta
 scelta = input("Inserisci 'carta, sasso o forbice': " )
 
@@ -23,6 +23,14 @@ else:
 #             if scelta_computer = sasso:
         elif scelta_computer == "carta":
             print("Sasso perde contro carta. Hai perso! :(")
+    elif scelta == "carta":
+        if scelta_computer == "forbice":
+            print("Carta perde contro forbice. Hai perso! :(")
+        elif scelta_computer == "carta":
+            print("Carta contro carta. Pareggio :|")
+        elif scelta_computer == "sasso":
+            print("Carta batte sasso. Hai vinto! :)")
+
     
     elif scelta == "forbice":
 #     if scelta utente == carta:
